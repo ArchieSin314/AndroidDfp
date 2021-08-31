@@ -7,14 +7,48 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/id_placeholder"
+        android:id="@+id/dfp_plain"
         android:layout_width="385dp"
         android:layout_height="70dp"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="Willbe hash----------"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_dfp_plain" />
+
+    <TextView
+        android:id="@+id/label_dfp_plain"
+        android:layout_width="195dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="DFP plain values"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_dfp_hash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="DFP hashed values"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dfp_plain" />
+
+    <TextView
+        android:id="@+id/dfp_hash"
+        android:layout_width="385dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:text="Willbe hash----------"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_dfp_hash" />
 
     <Button
         android:id="@+id/dfp_gen"
@@ -25,6 +59,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_placeholder" />
+        app:layout_constraintTop_toBottomOf="@+id/dfp_hash" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

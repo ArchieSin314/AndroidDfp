@@ -12,12 +12,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button = findViewById<Button>(R.id.dfp_gen)
-        val txt = findViewById<TextView>(R.id.id_placeholder)
+        val dfp_plain = findViewById<TextView>(R.id.dfp_plain)
+        val dfp_hash = findViewById<TextView>(R.id.dfp_hash)
         val context = applicationContext
         button.setOnClickListener {
             val d = DfpFactory(GsfIdProvider(context.contentResolver!!),AndroidIdProvider(context.contentResolver!!),MediaDrmIdProvider())
-            txt.text = d.getHash()
+            dfp_plain.text = d.getDfp()
+            dfp_hash.text = d.getDfp(true)
         }
     }
-
 }

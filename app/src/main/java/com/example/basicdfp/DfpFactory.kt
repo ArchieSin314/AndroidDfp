@@ -22,25 +22,25 @@ class DfpFactory (gsfIdProvider: GsfIdProvider,
     )
 
 
-    fun getHash(): String{
-        var tmp = ""
-
-        if ( ! rawData.androidId().value.isEmpty())
-            tmp += rawData.androidId().value + "|"
+    fun getDfp(hashed: Boolean = false): String{
+        var a_id = if ( ! rawData.androidId().value.isEmpty())
+            rawData.androidId().value
         else
-            tmp += "none|"
+            "none"
 
-        if (! rawData.gsfId().value.isEmpty())
-            tmp += rawData.gsfId().value + "|"
+        var g_id = if (! rawData.gsfId().value.isEmpty())
+             rawData.gsfId().value
         else
-            tmp += "none|"
+            "none"
 
-        if (! rawData.mediaDrmId().value.isEmpty())
-            tmp += rawData.mediaDrmId().value
+        var m_id = if (! rawData.mediaDrmId().value.isEmpty())
+            rawData.mediaDrmId().value
         else
-            tmp += "none|"
-
-        return tmp
+            "none|"
+        if (hashed)
+            return "${hashString(a_id, "SHA256")}|${hashString(g_id, "SHA256")}|${hashString(m_id,"SHA256")}"
+        else
+            return "$a_id|$g_id|$m_id"
     }
 
     private fun hashString(input: String, algorithm: String): String {
