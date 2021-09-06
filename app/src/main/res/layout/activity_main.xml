@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/dfp_plain"
-        android:layout_width="385dp"
-        android:layout_height="70dp"
+        android:layout_width="252dp"
+        android:layout_height="228dp"
         android:layout_marginTop="10dp"
         android:text="Willbe hash----------"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -23,7 +23,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="DFP plain values"
-        android:textColor="#000000"
+        android:textColor="@color/purple_200"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,16 +34,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
-        android:textColor="#000000"
-        android:textStyle="bold"
         android:text="DFP hashed values"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dfp_plain" />
 
     <TextView
         android:id="@+id/dfp_hash"
-        android:layout_width="385dp"
-        android:layout_height="70dp"
+        android:layout_width="294dp"
+        android:layout_height="221dp"
         android:layout_marginTop="10dp"
         android:text="Willbe hash----------"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -54,7 +54,6 @@
         android:id="@+id/dfp_gen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
         android:text="Gen dfp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

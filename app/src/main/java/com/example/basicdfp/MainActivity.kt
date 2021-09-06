@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         val context = applicationContext
         button.setOnClickListener {
             val d = DfpFactory(GsfIdProvider(context.contentResolver!!),AndroidIdProvider(context.contentResolver!!),MediaDrmIdProvider())
-            dfp_plain.text = d.getDfp()
-            dfp_hash.text = d.getDfp(true)
+            dfp_plain.text = d.getDfp(false )
+            dfp_hash.text = d.getDfp()
         }
     }
 }
